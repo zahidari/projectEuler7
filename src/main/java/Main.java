@@ -8,6 +8,8 @@
  *       What is the 10 001 st prime number?
  */
 public class Main {
+    
+
 
     public static void main(String[] args) {
         
@@ -15,11 +17,24 @@ public class Main {
        int nThPrime = 6;
        int countTheNth = 0; 
        
-       for(int i = 2; i < 20; i++){
-           
-       }
+       for(int i = 0;  i < nThPrime;)
 
-       
-    }
+ 
+    }//end of main
     
+    
+    
+       /** @brief:   is the number x prime ?
+        *   return: if prime than true, else false
+        */
+        boolean isItPrime(int x) { 
+
+            for (int i = 2; i <= x / 2; ++i)
+                if (x % i == 0)
+                return false;
+            return true;
+
+        }
+        
 }
+
