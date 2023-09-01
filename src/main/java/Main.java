@@ -8,14 +8,14 @@
  *       What is the 10 001 st prime number?
  *       
  *       We are decresing every time the n'th prime integer by 1 if we find a prime number.
- *       at the end we are gi,ongto find the n'th Prime number.
+ *       At the end the iteration is finished and we are going to find the n'th Prime number.
  */
 public class Main {
     
  /** @brief:   is the number x prime ?
     *   return: if the number is prime than returns true, else false
     */
-    boolean isItPrime(int x) 
+    static boolean isItPrime(int x) 
     { 
         for (int i = 2; i <= x / 2; ++i){
             if (x % i == 0){return false;}
@@ -25,15 +25,25 @@ public class Main {
 
     public static void main(String[] args) {
         
-        //number to iterate and find the primes.
+        //number to iterate and find each primes b.
         int num = 2;
-        int nThPrime = 6;
+        
+        //the number you are looking for
+        int nThPrime = 10001;
        
         
        
-        while(nThPrime != 0){
+        while(true){
+            
+            //is the num a prime number,
+            //than each time  the nThPrime is decreasing
            if(isItPrime(num))
                nThPrime -=1;
+           
+           //control of the 
+           if(nThPrime == 0)
+               break;
+           
            num++;
            
            
